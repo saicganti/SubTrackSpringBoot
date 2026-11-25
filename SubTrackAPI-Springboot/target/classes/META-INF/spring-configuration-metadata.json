@@ -1,0 +1,14 @@
+{
+  "groups": [
+    {
+      "name": "custom.config",
+      "type": "com.example.subtrackapispringboot.controller.jwt",
+      "sourceType": "com.example.subtrackapispringboot.controller.jwt"
+    }
+  ],
+  "properties": [],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}
