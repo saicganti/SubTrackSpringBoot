@@ -6,6 +6,7 @@ import com.example.subtrackapispringboot.dto.DashboardDto;
 import com.example.subtrackapispringboot.dto.SubscriptionDto;
 import com.example.subtrackapispringboot.entity.Category;
 import com.example.subtrackapispringboot.entity.Subscription;
+import com.example.subtrackapispringboot.exception.ResourceNotFoundException;
 import com.example.subtrackapispringboot.repository.CategoryRepository;
 import com.example.subtrackapispringboot.repository.SubscriptionRepository;
 import jakarta.transaction.Transactional;
@@ -61,7 +62,7 @@ public class SubscriptionService {
     public SubscriptionDto create(CreateSubscriptionDto dto, String userId){
 
         Category category = categoryRepository.findById(dto.categoryId())
-                .orElseThrow(() -> new RuntimeException("Category not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Category not found"));
 
         Subscription subscription = new Subscription();
         subscription.setName(dto.name());

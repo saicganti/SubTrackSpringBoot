@@ -108,9 +108,9 @@ export default function SubscriptionForm() {
           <div>
             <label className="label">Billing Cycle</label>
             <select name="billingCycle" className="input" value={form.billingCycle} onChange={change}>
-              <option>Weekly</option>
-              <option>Monthly</option>
-              <option>Yearly</option>
+              <option value="WEEKLY">Weekly</option>
+              <option value="MONTHLY">Monthly</option>
+              <option value="YEARLY">Yearly</option>C:\Users\saicg\IdeaProjects\SubTrackSpringBoot>
             </select>
           </div>
         </div>
